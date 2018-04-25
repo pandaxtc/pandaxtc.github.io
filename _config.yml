@@ -1,3 +1,9 @@
 remote_theme: lorepirri/cayman-blog
 title: Waylon Peng
-description: Hello, world.
+description: The blog of Yet Another CS Student. Hello, world.
+twitter: penguin_whale
+
+google_analytics: UA-118141222-1
+
+gems:
+  - jekyll-feed
