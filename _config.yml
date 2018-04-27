@@ -1,9 +1,50 @@
-remote_theme: lorepirri/cayman-blog
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
 title: Waylon Peng
-description: Yet Another CS Student.
-twitter.username: penguin_whale
+email: contact@waylonpeng.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Yet Another CS Student.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://www.waylonpeng.com" # the base hostname & protocol for your site, e.g. http://example.com
+twitter: 
+  username: penguin_whale
+github_username:  dragxtcon
+
+# Build settings
+markdown: kramdown
+# theme: cayman-blog # Forked and provided locally
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+# remote_theme: lorepirri/cayman-blog
+repository: dragxtcon/home
 
 google_analytics: UA-118141222-1
 
-gems:
+plugins:
   - jekyll-feed
