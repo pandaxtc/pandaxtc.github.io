@@ -21,7 +21,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.waylonpeng.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter: 
   username: penguin_whale
-github_username:  dragxtcon
+github_username:  pandaxtc
 
 # Build settings
 markdown: kramdown
@@ -42,9 +42,10 @@ plugins:
 #   - vendor/ruby/
 
 # remote_theme: lorepirri/cayman-blog
-repository: dragxtcon/home
+repository: pandaxtc/home
 
 google_analytics: UA-118141222-1
 
 plugins:
   - jekyll-feed
+  - jekyll-paginator

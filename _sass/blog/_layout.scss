@@ -2,13 +2,17 @@
  * Site header
  */
 .site-header {
-  border-bottom: 1px solid $grey-color-light;
+  //position: absolute;
+  width: 100%;
+  /*border-bottom: 1px solid $grey-color-light;*/
   min-height: $spacing-unit * 1.865;
+  background: transparent;
 
   // Positioning context for the mobile navigation icon
-  position: relative;
+  //position: relative;
 }
 
+/*
 .site-title {
   @include relative-font-size(1.4);
   font-weight: 300;
@@ -25,19 +29,20 @@
     text-decoration: none;
   }
 }
+*/
 
 .site-nav {
-  float: right;
+  //position: fixed;
+  float: left;
   line-height: $base-line-height * $base-font-size * 2.25;
+
+  display: none;
 
   .nav-trigger {
       display: none;
   }
 
-  .menu-icon {
-    display: none;
-  }
-
+  
   .page-link {
     color: $text-color;
     line-height: $base-line-height;
@@ -48,27 +53,34 @@
     }
   }
 
+  z-index: 999;
+
   @include media-query($on-palm) {
-    position: absolute;
-    top: 9px;
-    right: $spacing-unit / 2;
+    position: fixed;
+    top: $spacing-unit / 2;
+    left: $spacing-unit / 2;
     background-color: $background-color;
     border: 1px solid $grey-color-light;
     border-radius: 5px;
-    text-align: right;
+    text-align: left;
+    display: block;
 
     label[for="nav-trigger"] {
       display: block;
-      float: right;
+      float: left;
       width: 36px;
       height: 36px;
       z-index: 2;
       cursor: pointer;
     }
 
+    .site-nav {
+      display: block;
+    }
+
     .menu-icon {
       display: block;
-      float: right;
+      float: left;
       width: 36px;
       height: 26px;
       line-height: 0;
@@ -97,6 +109,8 @@
       display: block;
       padding: 10px 10px;
 
+      line-height: $base-line-height;
+
       &:last-child {
         margin-bottom: 10px;
       }
@@ -105,6 +119,17 @@
     }
 
   }
+
+}
+
+@include media-query($on-palm) {
+  .nav-btn {
+    display: none;
+  }
+}
+
+.home-page-nav {
+  display: block;
 }
 
 /**
