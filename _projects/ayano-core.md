@@ -2,7 +2,7 @@
 layout: project
 title: ayano-core
 github_name: ayano-core
-tagline: A simple, extensible bot core built off the discord.py API wrapper.
+tagline: A simple, extensible bot core made using the discord.py API wrapper.
 ---
 
 ayano-core is a simple and extensible bot core built off the discord.py API wrapper. It wraps the discord.py's Bot class into a single, highly configurable standalone package that comprises the central portion of all of my Discord bots.
