@@ -32,17 +32,17 @@ $on-laptop:        54em !default;
 //   }
 // }
 @mixin media-query($device) {
-  @media screen and (max-width: $device) {
-    @content;
-  }
+    @media screen and (max-width: $device) {
+        @content;
+    }
 }
 
 @mixin relative-font-size($ratio) {
-  font-size: $base-font-size * $ratio;
+    font-size: $base-font-size * $ratio;
 }
 
 // Import partials.
 @import
-  "blog/base",
-  "blog/layout"
+    //"blog/base",
+    "blog/layout"
 ;

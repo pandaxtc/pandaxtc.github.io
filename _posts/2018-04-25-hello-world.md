@@ -2,6 +2,7 @@
 layout: post
 title: "Hello, world."
 date: 2018-04-25
+tags: ayano-core
 ---
 
 Test post, please ignore.

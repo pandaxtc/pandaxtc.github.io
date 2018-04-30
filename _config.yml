@@ -16,19 +16,19 @@
 title: Waylon Peng
 email: contact@waylonpeng.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Yet Another CS Student.
+    Yet Another CS Student.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.waylonpeng.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter: 
-  username: penguin_whale
+    - username: penguin_whale
 linkedin:
-  username: waylonpeng
+    - username: waylonpeng
 
 # Build settings
 markdown: kramdown
 # theme: cayman-blog # Forked and provided locally
 plugins:
-  - jekyll-feed
+    - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -45,8 +45,14 @@ plugins:
 # remote_theme: lorepirri/cayman-blog
 repository: pandaxtc/home
 
+collections:
+    projects:
+        output: true
+        permalink: /projects/:path
+
+
 google_analytics: UA-118141222-1
 
 plugins:
-  - jekyll-feed
-  - jekyll-paginator
+    - jekyll-feed
+    - jekyll-paginator
