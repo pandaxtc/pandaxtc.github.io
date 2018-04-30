@@ -56,8 +56,8 @@
                 <h2 class="project-tagline"> {{ page.description }}</h2>
             {%- endif -%}
 
-            <!-- Post tagline -->
             {%- if page.layout == 'post' -%}
+            <!-- Post tagline -->
                 <h2 class="project-date">
                 <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
                     {%- assign date_format = site.cayman-    .date_format | default: "%b %-d, %Y" -%}
@@ -70,9 +70,9 @@
                 </h2>
             {%- endif -%}
 
-            <!-- navigation buttons for non-post and non-project pages -->
             {%- if page.layout == 'post' or page.layout == 'project' -%}
             {%- else -%}
+                <!-- navigation buttons for non-post and non-project pages -->
                 {%- assign default_paths = site.pages | map: "path" -%}
                 {%- assign page_paths = site.header_pages | default: default_paths -%}
                 <div class="nav-btn {%- if page.layout == 'home' -%}home-page-nav{%- endif -%}">
@@ -92,20 +92,20 @@
                 </div>
             {%- endif -%}
 
-            <!-- nav buttons for project pages -->
             {%- if page.layout == 'project' -%}
+            <!-- nav buttons for project pages -->
                 {%- assign project_repo = site.github.public_repositories | where: "name", page.github_name | first -%}
                 <a class="btn" href="{{ project_repo.html_url }}">View on Github</a>
                 <a class="btn" href="{{ site.url }}/projects">Back to Projects</a>
             {%- endif -%}
 
-            <!-- nav buttons for post pages -->
             {%- if page.layout == 'post' -%}
+            <!-- nav buttons for post pages -->
                 <a class="btn" href="{{ site.url }}/blog">Back to Blog</a>
             {%- endif -%}
 
-            <!-- home-specific social media icons -->
             {%- if page.layout == 'home' -%}
+            <!-- home-specific social media icons -->
                 <br>
                 <div class="home-icons">
                     {%- include social-icons.html -%}
@@ -113,9 +113,9 @@
             {%- endif -%}
         </section>
 
-        <!-- only display content and footer if page is not home -->
         {%- if page.layout == 'home' -%}
         {%- else -%}
+        <!-- only display content and footer if page is not home -->
             <section class="main-content">
 
                 {{ content }}
