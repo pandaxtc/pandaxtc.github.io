@@ -41,10 +41,8 @@
         <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     </head>
 
-    <body>
-        <!-- if page is home, create fullscreen bg, else include standard site header. -->
+    <body class="{% if page.layout == 'home' %}fullscreen{% endif %}">
         {%- if page.layout == 'home' -%}
-            <div class="fullscreen"></div>
         {%- else -%}
             {%- include mobile-nav.html -%}
         {%- endif -%}
