@@ -5,4 +5,7 @@ github_name: home
 tagline: My personal website, built using Jekyll.
 ---
 
-This is some more content. This will eventually explain this project.
+[waylonpeng.com](www.waylonpeng.com) is the site you are likely reading this on right now.
+
+waylonpeng.com is built using Jekyll and hosted on Github Pages. HTTPS is provided through [Cloudflare](https://www.cloudflare.com/). The site theme is forked from [cayman-blog](https://github.com/lorepirri/cayman-blog), which itself is forked from [cayman](https://github.com/pages-themes/cayman).
+

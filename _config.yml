@@ -55,4 +55,5 @@ google_analytics: UA-118141222-1
 
 plugins:
     - jekyll-feed
-    - jekyll-paginator
+    - jekyll-sitemap
+

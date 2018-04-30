@@ -9,30 +9,30 @@
         <meta name="theme-color" content="#E91E63">
 
         <!-- <title> tage versus page title logic -->
-        {% if page.title %}
-            {% if page.title == 'Home' %}
-                {% assign page-title = site.title | escape %}
+        {%- if page.title -%}
+            {%- if page.title == 'Home' -%}
+                {%- assign page-title = site.title | escape -%}
                 <title>{{ page-title | escape }}</title>
-            {% else %}
-                {% assign page-title = page.title| escape %}
+            {%- else -%}
+                {%- assign page-title = page.title| escape -%}
                 <title>{{ page-title | append: " - " | append: site.title | escape }}</title>
-            {% endif %}
-        {% else %}
-            {% assign page-title = site.title | escape %}
+            {%- endif -%}
+        {%- else -%}
+            {%- assign page-title = site.title | escape -%}
             <title>{{ page-title | escape }}</title>
-        {% endif %}
+        {%- endif -%}
 
-        {% if site.gems contains "jekyll-seo-tag" %}
+        {%- if site.gems contains "jekyll-seo-tag" -%}
             <!-- jekyll-seo-tag -->
-        {% else %}
-            {% include social-metatags.html %}
-        {% endif %}
+        {%- else -%}
+            {%- include social-metatags.html -%}
+        {%- endif -%}
 
         <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
-        {% if site.gems contains "jekyll-feed" %}
+        {%- if site.gems contains "jekyll-feed" -%}
             <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
-        {% endif %}
+        {%- endif -%}
 
         <link rel="shortcut icon" href="{{ site.url }}/favicon.ico">
         <meta name="robots" content="noarchive">
@@ -43,89 +43,92 @@
 
     <body>
         <!-- if page is home, create fullscreen bg, else include standard site header. -->
-        {% if page.layout == 'home' %}
+        {%- if page.layout == 'home' -%}
             <div class="fullscreen"></div>
-        {% else %}
-            {% include mobile-nav.html %}
-        {% endif %}
+        {%- else -%}
+            {%- include mobile-nav.html -%}
+        {%- endif -%}
 
         <section class="page-header {% if page.layout == 'home' %}home-page-header{% endif %}">
             <h1 class="project-name">{{ page-title }}</h1>  
 
-            {% if page.tagline %}
+            {%- if page.tagline -%}
                 <h2 class="project-tagline"> {{ page.tagline }}</h2>
-            {% elsif page.description %}
+            {%- elsif page.description -%}
                 <h2 class="project-tagline"> {{ page.description }}</h2>
-            {% endif %}
+            {%- endif -%}
 
             <!-- Post tagline -->
-            {% if page.layout == 'post' %}
+            {%- if page.layout == 'post' -%}
                 <h2 class="project-date">
                 <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-                    {% assign date_format = site.cayman-    .date_format | default: "%b %-d, %Y" %}
+                    {%- assign date_format = site.cayman-    .date_format | default: "%b %-d, %Y" -%}
                     {{ page.date | date: date_format }}
                 </time>
-                {% assign page_author = page.author | default: site.author | default: nil | escape %}
-                {% if page_author %}
+                {%- assign page_author = page.author | default: site.author | default: nil | escape -%}
+                {%- if page_author -%}
                     • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page_author }}</span></span>
-                {% endif %}
+                {%- endif -%}
                 </h2>
-            {% endif %}
+            {%- endif -%}
 
             <!-- navigation buttons for non-post and non-project pages -->
-            {% if page.layout == 'post' or page.layout == 'project' %}
-            {% else %}
-                {% assign default_paths = site.pages | map: "path" %}
-                {% assign page_paths = site.header_pages | default: default_paths %}
-                <div class="nav-btn {% if page.layout == 'home' %}home-page-nav{% endif %}">
-                    <a class="btn" href="{{ site.url }}">{{ 'Home' | escape }}</a>
-                    {% for path in page_paths %}
-                        {% assign my_page = site.pages | where: "path", path | first %}
-                        {% if my_page.title %}
-                            {% if my_page.title contains "404" or my_page.title == page.title or my_page.title == 'Home' %}
-                            {% else %}
+            {%- if page.layout == 'post' or page.layout == 'project' -%}
+            {%- else -%}
+                {%- assign default_paths = site.pages | map: "path" -%}
+                {%- assign page_paths = site.header_pages | default: default_paths -%}
+                <div class="nav-btn {%- if page.layout == 'home' -%}home-page-nav{%- endif -%}">
+                    {%- if page.layout == 'home' -%}
+                    {%- else -%}
+                        <a class="btn" href="{{ site.url }}">{{ 'Home' | escape }}</a>
+                    {%- endif -%}
+                    {%- for path in page_paths -%}
+                        {%- assign my_page = site.pages | where: "path", path | first -%}
+                        {%- if my_page.title -%}
+                            {%- if my_page.title contains "404" or my_page.title == page.title or my_page.title == 'Home' -%}
+                            {%- else -%}
                                 <a class="btn" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-                            {% endif %}
-                        {% endif %}
-                    {% endfor %}
+                            {%- endif -%}
+                        {%- endif -%}
+                    {%- endfor -%}
                 </div>
-            {% endif %}
+            {%- endif -%}
 
             <!-- nav buttons for project pages -->
-            {% if page.layout == 'project' %}
-                {% assign project_repo = site.github.public_repositories | where: "name", page.github_name | first %}
+            {%- if page.layout == 'project' -%}
+                {%- assign project_repo = site.github.public_repositories | where: "name", page.github_name | first -%}
                 <a class="btn" href="{{ project_repo.html_url }}">View on Github</a>
                 <a class="btn" href="{{ site.url }}/projects">Back to Projects</a>
-            {% endif %}
+            {%- endif -%}
 
             <!-- nav buttons for post pages -->
-            {% if page.layout == 'post' %}
+            {%- if page.layout == 'post' -%}
                 <a class="btn" href="{{ site.url }}/blog">Back to Blog</a>
-            {% endif %}
+            {%- endif -%}
 
             <!-- home-specific social media icons -->
-            {% if page.layout == 'home' %}
+            {%- if page.layout == 'home' -%}
                 <br>
                 <div class="home-icons">
-                    {% include social-icons.html %}
+                    {%- include social-icons.html -%}
                 </div>
-            {% endif %}
+            {%- endif -%}
         </section>
 
         <!-- only display content and footer if page is not home -->
-        {% if page.layout == 'home' %}
-        {% else %}
+        {%- if page.layout == 'home' -%}
+        {%- else -%}
             <section class="main-content">
 
                 {{ content }}
 
                 <footer class="site-footer">
-                    {% include social-icons.html %}
+                    {%- include social-icons.html -%}
                 </footer>
             </section>
-        {% endif %}
+        {%- endif -%}
 
-        {% if site.google_analytics %}
+        {%- if site.google_analytics -%}
             <script type="text/javascript">
                 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -135,6 +138,6 @@
                 ga('create', '{{ site.google_analytics }}', 'auto');
                 ga('send', 'pageview');
             </script>
-        {% endif %}
+        {%- endif -%}
     </body>
 </html>

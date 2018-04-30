@@ -6,12 +6,12 @@ permalink: /projects.html
 ---
 
 <ul class="post-list">
-    {% for project in site.projects %}
+    {%- for project in site.projects -%}
         <li>
         <h2>
             <a class="post-link" href="{{ project.url | relative_url }}" title="{{ project.title }}">{{ project.title | escape }}</a>
         </h2>
         <span>{{ project.tagline | markdownify | truncatewords: 30 }}</span>
         </li>
-    {% endfor %}
+    {%- endfor -%}
 </ul>
