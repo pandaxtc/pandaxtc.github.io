@@ -41,8 +41,12 @@
         <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     </head>
 
-    <body class="{% if page.layout == 'home' %}fullscreen{% endif %}">
+    <body class="{% if page.layout == 'home' %}bg{% endif %}">
         {%- if page.layout == 'home' -%}
+            <!-- particles.js -->
+            <div class="fullscreen" id="particles-js"></div>
+            <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+            <script src="assets/js/app.js"></script>
         {%- else -%}
             {%- include mobile-nav.html -%}
         {%- endif -%}

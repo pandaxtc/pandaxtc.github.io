@@ -4,17 +4,17 @@ $medium-breakpoint: 42em !default;
 
 // Headers
 $header-heading-color: #fff !default;
-$header-bg-color: /*#159957*/ #7B1FA2 !default;
-$header-bg-color-secondary: /*#155799*/ #E91E63 !default;
+$header-bg-color: /*#159957*/ #9200AA !default;
+$header-bg-color-secondary: /*#155799*/ #f44336 !default;
 //$header-bg-color: #000046;
 //$header-bg-color-secondary: #1CB5E0;
 
 
 // Text
 // $section-headings-color: #159957 !default;
-$section-headings-color: #7B1FA2 !default;
+$section-headings-color: $header-bg-color-secondary !default;
 $body-text-color: #606c71 !default;
-$body-link-color: #E91E63 !default;
+$body-link-color: $header-bg-color !default;
 $blockquote-text-color: #819198 !default;
 
 // Code
