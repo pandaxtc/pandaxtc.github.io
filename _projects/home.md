@@ -2,7 +2,7 @@
 layout: project
 title: waylonpeng.com
 github_name: home
-tagline: My personal website, built using Jekyll.
+description: My personal website, built using Jekyll.
 ---
 
 [waylonpeng.com](www.waylonpeng.com) is the site you are likely reading this on right now.
