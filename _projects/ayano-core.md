@@ -1,10 +1,10 @@
 ---
 layout: project
-title: ayano-core
-github_name: ayano-core
-description: A simple, extensible bot core created using the discord.py API wrapper.
+title: Emilia
+github_name: ayano
+description: A simple bot created using discord.py.
 ---
 
-ayano-core is a simple and extensible bot core built off the [discord.py](https://github.com/Rapptz/discord.py) API wrapper. It wraps the discord.py's Bot class into a single, highly configurable standalone package that comprises the central portion of all of my Discord bots.
+Emilia is a simple Discord bot built off the [discord.py](https://github.com/Rapptz/discord.py) API wrapper. It currently serves mostly as my testbed for database manipulation, data storage/caching, and user interaction practices. It also contains several utilities for Discord that I personally find useful.
 
-ayano-core was not created for general use; rather, it was originally a tool that let me update changes to components shared between my bots quickly. As such, calling it a "bot core" may be somewhat gratuitous until it becomes more mature and divergent from the discord.py API wrapper's own implementation.
+Emilia is currently a heavy WIP, but eventually may be released for public use.
