@@ -508,3 +508,50 @@ a {
     color: #fff;
     fill: rgba(255, 255, 255, 0.5);
 }
+
+.home-love {
+    position: absolute;
+    color: #fff;
+    opacity: 0.7;
+
+    @include large {
+        font-size: 0.8rem;
+        right: 1em;
+        bottom: 1em;
+    }
+
+    @include medium {
+        font-size: 0.8rem;
+        width: 100%;
+        right: 0;
+        text-align: center;
+        bottom: 1em;
+    }
+
+    @include small {
+        font-size: 0.65rem;
+        width: 100%;
+        text-align: center;
+        bottom: 1em;
+    }
+}
+
+.page-love {
+    @extend .my-span-icon;
+    float: right;
+    opacity: 0.7;
+    font-size: 0.8rem;
+    margin-right: 10px;
+
+    @include large {
+        margin-top: 0.6rem;
+    }
+
+    @include medium {
+        margin-top: 0.6rem;
+    }
+
+    @include small {
+        margin-top: 0.6rem;
+    }
+}

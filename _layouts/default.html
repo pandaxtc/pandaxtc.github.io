@@ -119,6 +119,7 @@
         </section>
 
         {%- if page.layout == 'home' -%}
+            <span class="home-love">Made with <a href="/assets/static/monch.html">🍵</a></span>
         {%- else -%}
         <!-- only display content and footer if page is not home -->
             <section class="main-content">
@@ -138,7 +139,7 @@
                 n=a.getElementsByTagName(l)[0];o.src='//www.google-analytics.com/analytics.js';
                 n.parentNode.insertBefore(o,n)}(window,document,'ga','script');
 
-                ga('create', 'UA-XXXXX-X', 'auto');
+                ga('create', '{{ site.google_analytics }}', 'auto');
                 ga('send', 'pageview');
             </script>
         {%- endif -%}
