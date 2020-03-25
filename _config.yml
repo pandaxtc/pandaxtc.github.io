@@ -50,7 +50,6 @@ collections:
         output: true
         permalink: /projects/:path
 
-
 google_analytics: UA-118141222-1
 
 plugins:
