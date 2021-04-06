@@ -25,9 +25,7 @@
     {{ template "_internal/opengraph.html" . }}
     <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
 
-    <!-- Bring in page styles -->
-    {{ $css := "css/style.css" | absURL }}
-    <link rel="stylesheet" href="{{ $css }}" />
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
     <header>
