@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+
+body {
+  font-family: Inter, Helvetica, sans-serif;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+header,
+main {
+  max-width: 52rem;
+  margin: auto;
+  padding: 0rem 2rem;
+}
+
+h1 {
+  font-family: Inter;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 77px;
+}
+
+h2 {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+}
+
+h3 {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+small {
+  font-family: Inter;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.site-header {
+  margin: 96px 0px 8px 0px;
+}
+
+.nav {
+  position: relative;
+  left: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px 0px 48px 0px;
+  padding: 0px;
+
+  letter-spacing: 0.05em;
+  list-style-type: none;
+}
+
+.nav li {
+  display: inline;
+}
+
+.nav li:not(:last-child)::after {
+  content: "\00a0\00a0//\00a0\00a0";
+  color: rgba(0, 0, 0, 0.38);
+}
+
+.sections {
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+.section-header {
+  width: 5em;
+  margin: 0px 24px 16px 0px;
+}
+
+.section-content {
+  display: flex;
+  flex: 1;
+  flex-basis: 20em;
+  flex-direction: column;
+}
+
+.section-content h3 {
+  margin: 0px;
+}
+
+.section-content * ~ h3 {
+  margin: 16px 0px 0px 0px;
+}
+
+.section-content h3 a {
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none;
+}
+
+.section-content h3 a:hover {
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: underline;
+}
+
+.section-content p {
+  margin: 0px;
+}
+
+.section-content * ~ p {
+  margin: 8px 0px 0px 0px;
+}
+
+.section-content small {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.section-content * ~ small {
+  margin: 8px 0px 0px 0px;
+}

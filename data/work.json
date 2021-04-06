@@ -1,0 +1,25 @@
+{
+  "work": [
+    {
+      "company": "Google",
+      "position": "SWE Intern",
+      "location": "Sunnyvale, CA",
+      "startDate": "June 2020",
+      "endDate": "September 2020"
+    },
+    {
+      "company": "Google",
+      "position": "SWE Intern",
+      "location": "Austin, TX",
+      "startDate": "June 2019",
+      "endDate": "September 2019"
+    },
+    {
+      "company": "MindSpark Summer",
+      "position": "Instructor",
+      "location": "Sunnyvale, CA",
+      "startDate": "July 2018",
+      "endDate": "August 2018"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+baseURL = "http://www.waylonpeng.com/"
+languageCode = "en-us"
+title = "Waylon Penggg"
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  title = "Waylon Peng"
+  author = "Waylon Peng"
+  description = "Waylon Peng's personal homepage."
+
+[menu]
+  [[menu.main]]
+    name = "about"
+    url = "/"
+    weight = -1
+  # [[menu.main]]
+  #   name = "blog"
+  #   url = "/blog/"
+  #   weight = 1
+  [[menu.main]]
+    name = "resume"
+    url = "/resume.pdf"
+    weight = 2
+  [[menu.main]]
+    name = "github"
+    url = "https://github.com/pandaxtc"
+    weight = 3
+  [[menu.main]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/waylonpeng"
+    weight = 4
+

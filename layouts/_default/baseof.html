@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <!-- Set title with front matter if available -->
+    {{ if isset .Params "title"}}
+    <title>{{ .Title }}</title>
+    {{ else }}
+    <title>{{ .Site.Title }}</title>
+    {{ end }}
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Set page meta description with front matter if available -->
+    {{ if isset .Params "Description" }}
+    <meta name="description" content="{{ .Description }}" />
+    {{ else }}
+    <meta name="description" content="{{ .Site.Params.Description }}" />
+    {{ end }}
+
+    <!-- Open Graph tags and normalize/sanitize -->
+    {{ template "_internal/opengraph.html" . }}
+    <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
+
+    <!-- Bring in page styles -->
+    {{ $css := "css/style.css" | absURL }}
+    <link rel="stylesheet" href="{{ $css }}" />
+  </head>
+  <body>
+    <header>
+      <h1 class="site-header">{{ .Title }}</h1>
+      <ul class="nav">
+        <!-- Generate site menu -->
+        {{ range .Site.Menus.main }}
+        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </header>
+    <main>{{ block "main" . }}{{ end }}</main>
+  </body>
+</html>
