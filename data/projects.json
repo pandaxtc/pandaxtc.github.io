@@ -6,8 +6,8 @@
       "link": "https://github.com/pandaxtc/towa"
     },
     {
-      "name": "DongoDB",
-      "description": "DongoDB is a sharded, fault-tolerant, RESTful key-value store built using Quart and asyncio. It enforces causal consistency through a vector clock mechanism, and was designed to be simple and horizontally scalable using Docker."
+      "name": "DangoDB",
+      "description": "DangoDB is a sharded, fault-tolerant, RESTful key-value store built using Quart and asyncio. It enforces causal consistency through a vector clock mechanism, and was designed to be simple and horizontally scalable using Docker."
     }
   ]
 }
