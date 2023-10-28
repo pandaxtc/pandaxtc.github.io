@@ -1,11 +1,18 @@
 {
   "work": [
     {
+      "company": "Space Sciences Lab",
+      "position": "Software Engineer",
+      "location": "Berkeley, CA",
+      "startDate": "July 2023",
+      "endDate": "Present"
+    },
+    {
       "company": "Nuro",
       "position": "Security Engineer",
       "location": "Mountain View, CA",
       "startDate": "July 2022",
-      "endDate": "Present"
+      "endDate": "May 2023"
     },
     {
       "company": "Google",

@@ -1,6 +1,6 @@
-baseURL = "http://www.waylonpeng.com/"
+baseURL = "http://waylonpeng.com/"
 languageCode = "en-us"
-title = "Waylon Penggg"
+title = "Waylon Peng"
 disableKinds = ["taxonomy", "term"]
 
 [params]
