@@ -26,9 +26,10 @@
 
     <!-- Open Graph tags and normalize/sanitize -->
     {{ template "_internal/opengraph.html" . }}
-    <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
 
+    <link rel="stylesheet" href="css/sanitize.css"  />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="canonical" href="{{ .Permalink }}" />
   </head>
   <body>
     <header>
