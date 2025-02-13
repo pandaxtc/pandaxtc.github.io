@@ -4,4 +4,4 @@
 
 My personal website, built using [Hugo](https://gohugo.io/).
 
-View it [here](https://www.waylonpeng.com/).
+View it [here](https://waylon.sh/).
