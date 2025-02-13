@@ -6,5 +6,5 @@ Hi! I'm a Software Engineer at the [Space Sciences Laboratory](https://www.ssl.b
 Cruz. My pronouns are he/him.
 
 I’m interested in distributed systems, cybersecurity, and web 
-technologies. If you’d like to get in touch, email me at waylonpeng (at)
-gmail (dot) com.
+technologies. If you’d like to get in touch, email me at hi (at)
+waylon (dot) sh.
